@@ -1,0 +1,10 @@
+/* 
+  alertTable.strings
+  PeelAlarm
+
+  Created by Dave Rogers on 9/17/17.
+  Copyright © 2017 Cemico. All rights reserved.
+*/
+
+// table cell strings
+"table.cell.alarm" = "Alarm";
