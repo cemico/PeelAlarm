@@ -22,7 +22,7 @@ extension AlarmViewController: UITableViewDataSource {
     func configureTable() {
 
         // remove the dead lines when the display doesn't fill the screen
-        tableView.tableFooterView = UIView.init(frame: CGRect.zero)
+        tableView.removeUnusedBottomRowsWithTableFooter()
     }
 
     func reloadTable() {
@@ -101,7 +101,7 @@ extension AlarmViewController: UITableViewDataSource {
 
             // self update
             let alarm = alarms[indexPath.row]
-            cell.updateAlarm(alarm)
+            cell.update(alarm: alarm)
 
             cell.onEnableDisble = { [unowned cell, unowned self] isEnabled in
 
@@ -224,7 +224,7 @@ class AlarmTableViewCell: UITableViewCell {
     }
 
     // helpers
-    func updateAlarm(_ alarm: AlarmItem) {
+    func update(alarm: AlarmItem) {
 
         time = String.format12HourTime(hour: alarm.hour12, minute: alarm.minute)
         amPm = alarm.isAM ? "AM" : "PM"

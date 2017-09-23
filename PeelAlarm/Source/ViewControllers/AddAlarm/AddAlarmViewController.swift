@@ -24,9 +24,9 @@ class AddAlarmViewController: UIViewController {
     weak var delegate: AddAlarmProtocol?
 
     // current selections - set outside current vc, thus udpate to table
-    var currentSound = "WaveRider"  { didSet { update(at: .sound) } }
-    var currentImage = "Sunrise"    { didSet { update(at: .image) } }
-    var currentVideo = "Rooster"    { didSet { update(at: .video) } }
+    var currentSound = K.KnownSounds.default    { didSet { update(at: .sound) } }
+    var currentImage = "Sunrise"                { didSet { update(at: .image) } }
+    var currentVideo = "Rooster"                { didSet { update(at: .video) } }
 
     // current selections - set on this vc
     var currentName = LocalizedStringKeys.AlertViewController().tableCellAlarmTitle
@@ -39,15 +39,9 @@ class AddAlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // pull all the bundled sounds for *.caf
-        let ext = "caf"
-        var sounds = Bundle.main.resourceFiles(ofType: ext)
 
-        // add default
-        sounds.append("Default")
-
-        // pull random sound
-        let randomIndex = Int(Date().timeIntervalSince1970) % sounds.count
-        currentSound = sounds[randomIndex]
+//        // pull random sound
+//        let randomIndex = Int(Date().timeIntervalSince1970) % sounds.count
+//        currentSound = sounds[randomIndex]
     }
 }

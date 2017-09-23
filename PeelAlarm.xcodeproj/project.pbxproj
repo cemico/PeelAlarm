@@ -30,6 +30,9 @@
 		AA9BB8BC1F70E0260026FB84 /* Hard Rain.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8AD1F70DFBA0026FB84 /* Hard Rain.caf */; };
 		AA9BB8BE1F70E0260026FB84 /* Oh Yea.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8AA1F70DD140026FB84 /* Oh Yea.caf */; };
 		AA9BB8C01F70E0260026FB84 /* School Bell Ringing.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8B41F70E0050026FB84 /* School Bell Ringing.caf */; };
+		AAA1263D1F76142700D69095 /* AddSoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1263C1F76142700D69095 /* AddSoundData.swift */; };
+		AAA1263F1F7614E300D69095 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1263E1F7614E300D69095 /* Constants.swift */; };
+		AAA126411F761BBF00D69095 /* UITableView_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA126401F761BBF00D69095 /* UITableView_Utils.swift */; };
 		AAB638171F70EB670050EB33 /* Bundle_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB638161F70EB670050EB33 /* Bundle_Utils.swift */; };
 		AAB638191F70FF180050EB33 /* SoundMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB638181F70FF180050EB33 /* SoundMgr.swift */; };
 		AAB76B0D1F6EEB5000D25843 /* NotificationMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB76B0C1F6EEB5000D25843 /* NotificationMessages.swift */; };
@@ -124,6 +127,9 @@
 		AA9BB8B31F70E0050026FB84 /* Bubbles.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubbles.caf; sourceTree = "<group>"; };
 		AA9BB8B41F70E0050026FB84 /* School Bell Ringing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "School Bell Ringing.caf"; sourceTree = "<group>"; };
 		AA9BB8B51F70E0050026FB84 /* Alarm Clock Bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alarm Clock Bell.caf"; sourceTree = "<group>"; };
+		AAA1263C1F76142700D69095 /* AddSoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSoundData.swift; sourceTree = "<group>"; };
+		AAA1263E1F7614E300D69095 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AAA126401F761BBF00D69095 /* UITableView_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView_Utils.swift; sourceTree = "<group>"; };
 		AAB638161F70EB670050EB33 /* Bundle_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle_Utils.swift; sourceTree = "<group>"; };
 		AAB638181F70FF180050EB33 /* SoundMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundMgr.swift; sourceTree = "<group>"; };
 		AAB76B0C1F6EEB5000D25843 /* NotificationMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMessages.swift; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 				AAF68E541F6E8ADF00F609E3 /* String_Utils.swift */,
 				AAF791051F6F965500590C48 /* UIAlertController_Utils.swift */,
 				AAF791331F708AFB00590C48 /* UIApplication_Utils.swift */,
+				AAA126401F761BBF00D69095 /* UITableView_Utils.swift */,
 				AA12B22B1F6E616F00F9C115 /* UITableViewCell_Utils.swift */,
 				AAF7910E1F6FB7BB00590C48 /* UIViewController_Utils.swift */,
 				AA2CFC241F6F0FFF008B0A5E /* UserDefaults_Utils.swift */,
@@ -359,6 +366,7 @@
 			children = (
 				AAD429471F6E66AF0082BF5A /* LocalizedStringKeys.swift */,
 				AAB76B0C1F6EEB5000D25843 /* NotificationMessages.swift */,
+				AAA1263E1F7614E300D69095 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -430,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				AAF791191F7039BD00590C48 /* AddSoundViewController.swift */,
+				AAA1263C1F76142700D69095 /* AddSoundData.swift */,
 				AAF791211F703FA700590C48 /* AddSoundButtonController.swift */,
 				AAF7912D1F70469300590C48 /* AddSoundProtocol.swift */,
 				AAF791271F70420500590C48 /* AddSoundTableViewController.swift */,
@@ -595,6 +604,7 @@
 				AAB638171F70EB670050EB33 /* Bundle_Utils.swift in Sources */,
 				AAF791151F7027B600590C48 /* AddAlarmTableViewController.swift in Sources */,
 				AAB76B0F1F6EEBEE00D25843 /* NotificationName_Utils.swift in Sources */,
+				AAA126411F761BBF00D69095 /* UITableView_Utils.swift in Sources */,
 				AAF7910F1F6FB7BB00590C48 /* UIViewController_Utils.swift in Sources */,
 				AA2CFC271F6F130D008B0A5E /* Int_Utils.swift in Sources */,
 				AA9BB8A81F7093690026FB84 /* UserNotificationMgr.swift in Sources */,
@@ -603,10 +613,12 @@
 				AAF7911A1F7039BD00590C48 /* AddSoundViewController.swift in Sources */,
 				AAD104161F6F396500C93396 /* Array_Utils.swift in Sources */,
 				AAF791061F6F965500590C48 /* UIAlertController_Utils.swift in Sources */,
+				AAA1263D1F76142700D69095 /* AddSoundData.swift in Sources */,
 				AA12B22C1F6E616F00F9C115 /* UITableViewCell_Utils.swift in Sources */,
 				AAF791261F7041E200590C48 /* AddVideoTableViewController.swift in Sources */,
 				AAF68E601F6EE0F400F609E3 /* NSLock_Utils.swift in Sources */,
 				AAF7910D1F6FA8E500590C48 /* AddAlarmButtonController.swift in Sources */,
+				AAA1263F1F7614E300D69095 /* Constants.swift in Sources */,
 				AAF68E5E1F6EE07100F609E3 /* AlarmData.swift in Sources */,
 				AA2CFC251F6F0FFF008B0A5E /* UserDefaults_Utils.swift in Sources */,
 			);

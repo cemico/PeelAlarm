@@ -44,6 +44,8 @@ class AddSoundViewController: UITableViewController {
     // used for save enabling (used nil so can distinguish from empty string as valid current value)
     var originalSound: String? = nil
 
+    var sounds: [String] = []
+
     ///////////////////////////////////////////////////////////
     // MARK: - System overrides
     ///////////////////////////////////////////////////////////
@@ -51,7 +53,13 @@ class AddSoundViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // simulate new selection
-        currentSound = "Lazer"
+        // table customizations
+        configureTable()
+
+        // load the data
+        sounds = updateData()
+
+        // update the display
+        tableView.reloadData()
     }
 }

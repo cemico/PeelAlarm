@@ -456,39 +456,75 @@
         <scene sceneID="z3J-rV-bMA">
             <objects>
                 <tableViewController title="Select Sound" id="QPE-4G-P78" customClass="AddSoundViewController" customModule="PeelAlarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="500" estimatedRowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" id="ldB-iR-12Y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" estimatedRowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="ldB-iR-12Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.74425750970000004" green="0.63941770789999997" blue="0.22740943729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <sections>
-                            <tableViewSection id="XaQ-KM-iQn">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4zN-mG-NMF">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4zN-mG-NMF" id="juz-TW-VZv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-iQ-IER">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SoundsNoDataTableViewCell" id="4zN-mG-NMF" customClass="SoundsNoDataTableViewCell" customModule="PeelAlarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4zN-mG-NMF" id="juz-TW-VZv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Sounds Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-iQ-IER">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Laz-iQ-IER" firstAttribute="leading" secondItem="juz-TW-VZv" secondAttribute="leading" id="0dS-W5-JHR"/>
+                                        <constraint firstItem="Laz-iQ-IER" firstAttribute="centerY" secondItem="juz-TW-VZv" secondAttribute="centerY" id="YMk-Py-zLw"/>
+                                        <constraint firstAttribute="trailing" secondItem="Laz-iQ-IER" secondAttribute="trailing" id="ZVb-3f-d5F"/>
+                                        <constraint firstItem="Laz-iQ-IER" firstAttribute="top" secondItem="juz-TW-VZv" secondAttribute="top" id="pIp-XJ-m41"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SoundsTableViewCell" id="ROd-9J-nKF" customClass="SoundsTableViewCell" customModule="PeelAlarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="78" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ROd-9J-nKF" id="lEA-pV-vLl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghQ-40-Tbw">
+                                            <rect key="frame" x="20" y="0.0" width="67.5" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-VG-Mk8">
+                                            <rect key="frame" x="335" y="10" width="30" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="Laz-iQ-IER" firstAttribute="leading" secondItem="juz-TW-VZv" secondAttribute="leading" id="0dS-W5-JHR"/>
-                                                <constraint firstItem="Laz-iQ-IER" firstAttribute="centerY" secondItem="juz-TW-VZv" secondAttribute="centerY" id="YMk-Py-zLw"/>
-                                                <constraint firstAttribute="trailing" secondItem="Laz-iQ-IER" secondAttribute="trailing" id="ZVb-3f-d5F"/>
-                                                <constraint firstItem="Laz-iQ-IER" firstAttribute="top" secondItem="juz-TW-VZv" secondAttribute="top" id="pIp-XJ-m41"/>
+                                                <constraint firstAttribute="width" constant="30" id="7RX-cR-jRH"/>
+                                                <constraint firstAttribute="height" constant="30" id="EFE-hC-Cjj"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sh4-VG-Mk8" firstAttribute="centerY" secondItem="lEA-pV-vLl" secondAttribute="centerY" id="26m-62-pgC"/>
+                                        <constraint firstItem="ghQ-40-Tbw" firstAttribute="top" secondItem="lEA-pV-vLl" secondAttribute="top" id="EHa-nj-xkD"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ghQ-40-Tbw" secondAttribute="trailing" id="I6a-bE-p27"/>
+                                        <constraint firstAttribute="trailing" secondItem="sh4-VG-Mk8" secondAttribute="trailing" constant="10" id="OTH-JF-tdF"/>
+                                        <constraint firstItem="ghQ-40-Tbw" firstAttribute="leading" secondItem="lEA-pV-vLl" secondAttribute="leading" constant="20" id="PFB-hc-Le4"/>
+                                        <constraint firstItem="ghQ-40-Tbw" firstAttribute="centerY" secondItem="lEA-pV-vLl" secondAttribute="centerY" id="rTb-bd-giE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="checkmarkImageView" destination="sh4-VG-Mk8" id="quB-Bu-BGR"/>
+                                    <outlet property="soundLabel" destination="ghQ-40-Tbw" id="bQQ-Ih-0KH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="QPE-4G-P78" id="cIa-YU-g0N"/>
                             <outlet property="delegate" destination="QPE-4G-P78" id="X7c-j1-p8q"/>
