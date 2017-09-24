@@ -106,7 +106,7 @@ extension AlarmViewController: UITableViewDataSource {
             cell.onEnableDisble = { [unowned cell, unowned self] isEnabled in
 
                 // track name color to enable state to match switch
-                cell.updateEnabled(isEnabled)
+                cell.updateAlarmEnabled(isEnabled)
                 print("enable row:", indexPath.row, isEnabled)
 
                 // udpate alarm state, locally and persistently
@@ -239,12 +239,13 @@ class AlarmTableViewCell: UITableViewCell {
         }
 
         // enabled
-        updateEnabled(alarm.isEnabled)
+        updateAlarmEnabled(alarm.isEnabled)
     }
 
-    func updateEnabled(_ enabled: Bool) {
+    func updateAlarmEnabled(_ enabled: Bool) {
 
         // set switch state
+        enableSwitch.onTintColor = K.Colors.selectionColor
         enableSwitch.isOn = enabled
 
         // update dynamic color

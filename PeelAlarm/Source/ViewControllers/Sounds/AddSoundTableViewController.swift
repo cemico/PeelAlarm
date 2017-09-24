@@ -81,24 +81,27 @@ extension AddSoundViewController {
 
 class SoundsTableViewCell: UITableViewCell {
 
+    struct Constants {
+
+        static let selectedImage   = "circle-checkmark-on"
+        static let deselectedImage = "circle-checkmark-off"
+    }
+
     @IBOutlet weak var soundLabel: UILabel!
     @IBOutlet weak var checkmarkImageView: UIImageView!
 
     override func prepareForReuse() {
         super.prepareForReuse()
-
-        checkmarkImageView.backgroundColor = UIColor.clear
-        self.backgroundColor = UIColor.clear
     }
+
     func update(sound: String, selectedSound: String) {
 
         soundLabel.text = sound
 
-        if sound == selectedSound {
-
-            checkmarkImageView.backgroundColor = UIColor.blue
-            self.backgroundColor = checkmarkImageView.backgroundColor?.withAlphaComponent(0.1)
-        }
+        let isSelected = (sound == selectedSound)
+        let image = (isSelected ? Constants.selectedImage : Constants.deselectedImage)
+        checkmarkImageView.image = UIImage(named: image)
+        soundLabel.textColor = (isSelected ? K.Colors.selectionColor : K.Colors.defaultText)
     }
 }
 

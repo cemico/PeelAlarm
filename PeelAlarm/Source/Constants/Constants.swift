@@ -7,11 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct K {
 
     struct KnownSounds {
 
-        static let `default`    = "Default"
+        static let `default`        = "Default"
+    }
+
+    struct Colors {
+
+        static let defaultText      = UIColor.black
+        static let selectionColor   = UIColor.blue
     }
 }
