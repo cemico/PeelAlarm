@@ -245,7 +245,14 @@ class AlarmTableViewCell: UITableViewCell {
     func updateAlarmEnabled(_ enabled: Bool) {
 
         // set switch state
-        enableSwitch.onTintColor = K.Colors.selectionColor
+        if #available(iOS 11.0, *) {
+
+            enableSwitch.onTintColor = UIColor.init(named: K.Colors.selectionName)
+        }
+        else {
+
+            enableSwitch.onTintColor = K.Colors.selectionColor
+        }
         enableSwitch.isOn = enabled
 
         // update dynamic color

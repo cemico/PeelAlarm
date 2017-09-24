@@ -11,6 +11,11 @@ import UIKit
 
 struct K {
 
+    struct BundleNamespaces {
+
+        static let images           = "AlertImages"
+    }
+
     struct KnownSounds {
 
         static let `default`        = "Default"
@@ -18,7 +23,16 @@ struct K {
 
     struct Colors {
 
-        static let defaultText      = UIColor.black
+        static let defaultTextName  = "defaultText"
+        static let defaultTextColor = UIColor.black
+
+        static let selectionName    = "selection"
         static let selectionColor   = UIColor.blue
+    }
+
+    struct CheckmarkImage {
+
+        static let on               = "circle-checkmark-on"
+        static let off              = "circle-checkmark-off"
     }
 }

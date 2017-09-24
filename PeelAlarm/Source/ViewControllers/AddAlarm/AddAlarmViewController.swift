@@ -25,7 +25,7 @@ class AddAlarmViewController: UIViewController {
 
     // current selections - set outside current vc, thus udpate to table
     var currentSound = K.KnownSounds.default    { didSet { update(at: .sound) } }
-    var currentImage = "Sunrise"                { didSet { update(at: .image) } }
+    var currentImage = "Smiley-Happy"           { didSet { update(at: .image) } }
     var currentVideo = "Rooster"                { didSet { update(at: .video) } }
 
     // current selections - set on this vc

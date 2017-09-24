@@ -44,6 +44,9 @@ class AddImageViewController: UITableViewController {
     // used for save enabling (used nil so can distinguish from empty string as valid current value)
     var originalImage: String? = nil
 
+    // data source
+    var images: [String] = []
+
     ///////////////////////////////////////////////////////////
     // MARK: - System overrides
     ///////////////////////////////////////////////////////////
@@ -51,7 +54,13 @@ class AddImageViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // simulate new selection
-        currentImage = "Sunset"
+        // table customizations
+        configureTable()
+
+        // load the data
+        images = updateData()
+
+        // update the display
+        tableView.reloadData()
     }
 }

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Sunrise.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "smiley-frustrated@2x.png",
       "scale" : "2x"
     },
     {

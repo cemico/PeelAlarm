@@ -46,7 +46,8 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         let backColor = UIColor.black.withAlphaComponent(0.2)
 
         // crude random choice
-        let fetchImageOnline = Int(Date().timeIntervalSince1970) % 2 == 0
+//        let fetchImageOnline = Int(Date().timeIntervalSince1970) % 2 == 0
+        let fetchImageOnline = (image.prefix(4).lowercased() == "http")
 
         // image source
         let imageSource = fetchImageOnline ? "(Online)" : image
@@ -78,7 +79,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         if !fetchImageOnline {
 
             // use notification payload image name
-            backgroundImageView.image = UIImage.init(named: image)
+            backgroundImageView.image = UIImage.alertImageFor(imageName: image)
         }
         else {
 

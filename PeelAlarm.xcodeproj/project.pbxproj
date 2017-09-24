@@ -23,13 +23,6 @@
 		AA65E4331F713C6300E6AD56 /* Date_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF791121F6FC1CA00590C48 /* Date_Utils.swift */; };
 		AA65E4341F713CF900E6AD56 /* SoundMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB638181F70FF180050EB33 /* SoundMgr.swift */; };
 		AA9BB8A81F7093690026FB84 /* UserNotificationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9BB8A71F7093690026FB84 /* UserNotificationMgr.swift */; };
-		AA9BB8B61F70E0250026FB84 /* Alarm Clock Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8B51F70E0050026FB84 /* Alarm Clock Bell.caf */; };
-		AA9BB8B71F70E0250026FB84 /* Big Waterfall.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8AC1F70DFBA0026FB84 /* Big Waterfall.caf */; };
-		AA9BB8B81F70E0250026FB84 /* Bubbles.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8B31F70E0050026FB84 /* Bubbles.caf */; };
-		AA9BB8B91F70E0250026FB84 /* Canoe Paddle.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8AE1F70DFBB0026FB84 /* Canoe Paddle.caf */; };
-		AA9BB8BC1F70E0260026FB84 /* Hard Rain.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8AD1F70DFBA0026FB84 /* Hard Rain.caf */; };
-		AA9BB8BE1F70E0260026FB84 /* Oh Yea.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8AA1F70DD140026FB84 /* Oh Yea.caf */; };
-		AA9BB8C01F70E0260026FB84 /* School Bell Ringing.caf in Resources */ = {isa = PBXBuildFile; fileRef = AA9BB8B41F70E0050026FB84 /* School Bell Ringing.caf */; };
 		AAA1263D1F76142700D69095 /* AddSoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1263C1F76142700D69095 /* AddSoundData.swift */; };
 		AAA1263F1F7614E300D69095 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1263E1F7614E300D69095 /* Constants.swift */; };
 		AAA126411F761BBF00D69095 /* UITableView_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA126401F761BBF00D69095 /* UITableView_Utils.swift */; };
@@ -45,7 +38,6 @@
 		AAF106D91F711CE000FD89DC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF106D81F711CE000FD89DC /* NotificationViewController.swift */; };
 		AAF106DC1F711CE000FD89DC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF106DA1F711CE000FD89DC /* MainInterface.storyboard */; };
 		AAF106E11F711CE000FD89DC /* PeelAlarmContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AAF106D11F711CE000FD89DC /* PeelAlarmContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AAF106E61F71277500FD89DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF106E51F71277500FD89DC /* Images.xcassets */; };
 		AAF68E511F6E873300F609E3 /* AlarmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF68E501F6E873300F609E3 /* AlarmItem.swift */; };
 		AAF68E531F6E87D500F609E3 /* CustomStringConvertible_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF68E521F6E87D500F609E3 /* CustomStringConvertible_Utils.swift */; };
 		AAF68E551F6E8ADF00F609E3 /* String_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF68E541F6E8ADF00F609E3 /* String_Utils.swift */; };
@@ -76,6 +68,20 @@
 		AAF791301F70469E00590C48 /* AddImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7912F1F70469E00590C48 /* AddImageProtocol.swift */; };
 		AAF791321F705DEB00590C48 /* AddAlarmTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF791311F705DEB00590C48 /* AddAlarmTextFieldController.swift */; };
 		AAF791341F708AFB00590C48 /* UIApplication_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF791331F708AFB00590C48 /* UIApplication_Utils.swift */; };
+		AAFF98401F78436100F1D454 /* AddImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF983F1F78436100F1D454 /* AddImageData.swift */; };
+		AAFF984B1F7844CB00F1D454 /* Alarm Clock Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF98441F7844A900F1D454 /* Alarm Clock Bell.caf */; };
+		AAFF984C1F7844CF00F1D454 /* Big Waterfall.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF98451F7844A900F1D454 /* Big Waterfall.caf */; };
+		AAFF984D1F7844D100F1D454 /* Bubbles.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF98461F7844A900F1D454 /* Bubbles.caf */; };
+		AAFF984E1F7844D400F1D454 /* Canoe Paddle.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF98471F7844A900F1D454 /* Canoe Paddle.caf */; };
+		AAFF984F1F7844D600F1D454 /* Hard Rain.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF98481F7844A900F1D454 /* Hard Rain.caf */; };
+		AAFF98501F7844D900F1D454 /* Oh Yea.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF98491F7844A900F1D454 /* Oh Yea.caf */; };
+		AAFF98511F7844DC00F1D454 /* School Bell Ringing.caf in Resources */ = {isa = PBXBuildFile; fileRef = AAFF984A1F7844A900F1D454 /* School Bell Ringing.caf */; };
+		AAFF985D1F78560D00F1D454 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFF985C1F78560D00F1D454 /* Colors.xcassets */; };
+		AAFF98601F785C6900F1D454 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFF985F1F785C6900F1D454 /* Images.xcassets */; };
+		AAFF98621F7865D700F1D454 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFF985F1F785C6900F1D454 /* Images.xcassets */; };
+		AAFF98631F78674F00F1D454 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1263E1F7614E300D69095 /* Constants.swift */; };
+		AAFF98651F78678700F1D454 /* UIImage_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF98641F78678700F1D454 /* UIImage_Utils.swift */; };
+		AAFF98661F78678700F1D454 /* UIImage_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF98641F78678700F1D454 /* UIImage_Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,13 +126,6 @@
 		AA2CFC281F6F134B008B0A5E /* Bool_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool_Utils.swift; sourceTree = "<group>"; };
 		AA2CFC2A1F6F2F2A008B0A5E /* NSArray_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArray_Utils.swift; sourceTree = "<group>"; };
 		AA9BB8A71F7093690026FB84 /* UserNotificationMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationMgr.swift; sourceTree = "<group>"; };
-		AA9BB8AA1F70DD140026FB84 /* Oh Yea.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oh Yea.caf"; sourceTree = "<group>"; };
-		AA9BB8AC1F70DFBA0026FB84 /* Big Waterfall.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Big Waterfall.caf"; sourceTree = "<group>"; };
-		AA9BB8AD1F70DFBA0026FB84 /* Hard Rain.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hard Rain.caf"; sourceTree = "<group>"; };
-		AA9BB8AE1F70DFBB0026FB84 /* Canoe Paddle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canoe Paddle.caf"; sourceTree = "<group>"; };
-		AA9BB8B31F70E0050026FB84 /* Bubbles.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubbles.caf; sourceTree = "<group>"; };
-		AA9BB8B41F70E0050026FB84 /* School Bell Ringing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "School Bell Ringing.caf"; sourceTree = "<group>"; };
-		AA9BB8B51F70E0050026FB84 /* Alarm Clock Bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alarm Clock Bell.caf"; sourceTree = "<group>"; };
 		AAA1263C1F76142700D69095 /* AddSoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSoundData.swift; sourceTree = "<group>"; };
 		AAA1263E1F7614E300D69095 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AAA126401F761BBF00D69095 /* UITableView_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView_Utils.swift; sourceTree = "<group>"; };
@@ -143,7 +142,6 @@
 		AAF106D81F711CE000FD89DC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		AAF106DB1F711CE000FD89DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		AAF106DD1F711CE000FD89DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAF106E51F71277500FD89DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AAF68E501F6E873300F609E3 /* AlarmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmItem.swift; sourceTree = "<group>"; };
 		AAF68E521F6E87D500F609E3 /* CustomStringConvertible_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible_Utils.swift; sourceTree = "<group>"; };
 		AAF68E541F6E8ADF00F609E3 /* String_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Utils.swift; sourceTree = "<group>"; };
@@ -174,6 +172,17 @@
 		AAF7912F1F70469E00590C48 /* AddImageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageProtocol.swift; sourceTree = "<group>"; };
 		AAF791311F705DEB00590C48 /* AddAlarmTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmTextFieldController.swift; sourceTree = "<group>"; };
 		AAF791331F708AFB00590C48 /* UIApplication_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication_Utils.swift; sourceTree = "<group>"; };
+		AAFF983F1F78436100F1D454 /* AddImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageData.swift; sourceTree = "<group>"; };
+		AAFF98441F7844A900F1D454 /* Alarm Clock Bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alarm Clock Bell.caf"; sourceTree = "<group>"; };
+		AAFF98451F7844A900F1D454 /* Big Waterfall.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Big Waterfall.caf"; sourceTree = "<group>"; };
+		AAFF98461F7844A900F1D454 /* Bubbles.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubbles.caf; sourceTree = "<group>"; };
+		AAFF98471F7844A900F1D454 /* Canoe Paddle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canoe Paddle.caf"; sourceTree = "<group>"; };
+		AAFF98481F7844A900F1D454 /* Hard Rain.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hard Rain.caf"; sourceTree = "<group>"; };
+		AAFF98491F7844A900F1D454 /* Oh Yea.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oh Yea.caf"; sourceTree = "<group>"; };
+		AAFF984A1F7844A900F1D454 /* School Bell Ringing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "School Bell Ringing.caf"; sourceTree = "<group>"; };
+		AAFF985C1F78560D00F1D454 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		AAFF985F1F785C6900F1D454 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AAFF98641F78678700F1D454 /* UIImage_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage_Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,10 +255,11 @@
 		AA12B2031F6E3A7B00F9C115 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AAFF98611F785CC900F1D454 /* Colors */,
 				AA12B2021F6E3A6B00F9C115 /* Assets */,
+				AAFF98411F7844A900F1D454 /* AlertLocal */,
 				AA12B2041F6E3B2D00F9C115 /* Displays */,
 				AA12B2341F6E649C00F9C115 /* Strings */,
-				AA9BB8A91F70DC4D0026FB84 /* Sounds */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,6 +301,7 @@
 				AAF68E541F6E8ADF00F609E3 /* String_Utils.swift */,
 				AAF791051F6F965500590C48 /* UIAlertController_Utils.swift */,
 				AAF791331F708AFB00590C48 /* UIApplication_Utils.swift */,
+				AAFF98641F78678700F1D454 /* UIImage_Utils.swift */,
 				AAA126401F761BBF00D69095 /* UITableView_Utils.swift */,
 				AA12B22B1F6E616F00F9C115 /* UITableViewCell_Utils.swift */,
 				AAF7910E1F6FB7BB00590C48 /* UIViewController_Utils.swift */,
@@ -339,20 +350,6 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		AA9BB8A91F70DC4D0026FB84 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				AA9BB8B51F70E0050026FB84 /* Alarm Clock Bell.caf */,
-				AA9BB8AC1F70DFBA0026FB84 /* Big Waterfall.caf */,
-				AA9BB8B31F70E0050026FB84 /* Bubbles.caf */,
-				AA9BB8AE1F70DFBB0026FB84 /* Canoe Paddle.caf */,
-				AA9BB8AD1F70DFBA0026FB84 /* Hard Rain.caf */,
-				AA9BB8AA1F70DD140026FB84 /* Oh Yea.caf */,
-				AA9BB8B41F70E0050026FB84 /* School Bell Ringing.caf */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		AAD429421F6E65A60082BF5A /* en-US.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,7 +383,6 @@
 				AAF106D81F711CE000FD89DC /* NotificationViewController.swift */,
 				AAF106DA1F711CE000FD89DC /* MainInterface.storyboard */,
 				AAF106DD1F711CE000FD89DC /* Info.plist */,
-				AAF106E51F71277500FD89DC /* Images.xcassets */,
 			);
 			path = PeelAlarmContentExtension;
 			sourceTree = "<group>";
@@ -450,11 +446,51 @@
 			isa = PBXGroup;
 			children = (
 				AAF7911B1F7039E800590C48 /* AddImageViewController.swift */,
+				AAFF983F1F78436100F1D454 /* AddImageData.swift */,
 				AAF7911F1F703F0800590C48 /* AddImageButtonController.swift */,
 				AAF7912F1F70469E00590C48 /* AddImageProtocol.swift */,
 				AAF791291F70421F00590C48 /* AddImageTableViewController.swift */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		AAFF98411F7844A900F1D454 /* AlertLocal */ = {
+			isa = PBXGroup;
+			children = (
+				AAFF985E1F785C5700F1D454 /* Images */,
+				AAFF98431F7844A900F1D454 /* Sounds */,
+			);
+			path = AlertLocal;
+			sourceTree = "<group>";
+		};
+		AAFF98431F7844A900F1D454 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AAFF98441F7844A900F1D454 /* Alarm Clock Bell.caf */,
+				AAFF98451F7844A900F1D454 /* Big Waterfall.caf */,
+				AAFF98461F7844A900F1D454 /* Bubbles.caf */,
+				AAFF98471F7844A900F1D454 /* Canoe Paddle.caf */,
+				AAFF98481F7844A900F1D454 /* Hard Rain.caf */,
+				AAFF98491F7844A900F1D454 /* Oh Yea.caf */,
+				AAFF984A1F7844A900F1D454 /* School Bell Ringing.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		AAFF985E1F785C5700F1D454 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AAFF985F1F785C6900F1D454 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		AAFF98611F785CC900F1D454 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				AAFF985C1F78560D00F1D454 /* Colors.xcassets */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,17 +577,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA9BB8B61F70E0250026FB84 /* Alarm Clock Bell.caf in Resources */,
-				AA9BB8B71F70E0250026FB84 /* Big Waterfall.caf in Resources */,
-				AA9BB8B81F70E0250026FB84 /* Bubbles.caf in Resources */,
-				AA9BB8B91F70E0250026FB84 /* Canoe Paddle.caf in Resources */,
-				AA9BB8BC1F70E0260026FB84 /* Hard Rain.caf in Resources */,
-				AA9BB8BE1F70E0260026FB84 /* Oh Yea.caf in Resources */,
-				AA9BB8C01F70E0260026FB84 /* School Bell Ringing.caf in Resources */,
+				AAFF984E1F7844D400F1D454 /* Canoe Paddle.caf in Resources */,
 				AA12B1F51F6E328000F9C115 /* Assets.xcassets in Resources */,
+				AAFF985D1F78560D00F1D454 /* Colors.xcassets in Resources */,
+				AAFF98601F785C6900F1D454 /* Images.xcassets in Resources */,
 				AAD429451F6E65D00082BF5A /* alertTable.strings in Resources */,
+				AAFF984B1F7844CB00F1D454 /* Alarm Clock Bell.caf in Resources */,
+				AAFF98501F7844D900F1D454 /* Oh Yea.caf in Resources */,
 				AA12B2321F6E648300F9C115 /* LaunchScreen.storyboard in Resources */,
 				AA12B2331F6E648700F9C115 /* Main.storyboard in Resources */,
+				AAFF984C1F7844CF00F1D454 /* Big Waterfall.caf in Resources */,
+				AAFF984D1F7844D100F1D454 /* Bubbles.caf in Resources */,
+				AAFF984F1F7844D600F1D454 /* Hard Rain.caf in Resources */,
+				AAFF98511F7844DC00F1D454 /* School Bell Ringing.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,8 +597,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAFF98621F7865D700F1D454 /* Images.xcassets in Resources */,
 				AAF106DC1F711CE000FD89DC /* MainInterface.storyboard in Resources */,
-				AAF106E61F71277500FD89DC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +640,7 @@
 				AAF68E5A1F6EDA7200F609E3 /* FileManager_Utils.swift in Sources */,
 				AAF7911E1F7039FC00590C48 /* AddVideoViewController.swift in Sources */,
 				AAB638171F70EB670050EB33 /* Bundle_Utils.swift in Sources */,
+				AAFF98651F78678700F1D454 /* UIImage_Utils.swift in Sources */,
 				AAF791151F7027B600590C48 /* AddAlarmTableViewController.swift in Sources */,
 				AAB76B0F1F6EEBEE00D25843 /* NotificationName_Utils.swift in Sources */,
 				AAA126411F761BBF00D69095 /* UITableView_Utils.swift in Sources */,
@@ -621,6 +660,7 @@
 				AAA1263F1F7614E300D69095 /* Constants.swift in Sources */,
 				AAF68E5E1F6EE07100F609E3 /* AlarmData.swift in Sources */,
 				AA2CFC251F6F0FFF008B0A5E /* UserDefaults_Utils.swift in Sources */,
+				AAFF98401F78436100F1D454 /* AddImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +671,8 @@
 				AAF106D91F711CE000FD89DC /* NotificationViewController.swift in Sources */,
 				AA65E4341F713CF900E6AD56 /* SoundMgr.swift in Sources */,
 				AA65E4331F713C6300E6AD56 /* Date_Utils.swift in Sources */,
+				AAFF98631F78674F00F1D454 /* Constants.swift in Sources */,
+				AAFF98661F78678700F1D454 /* UIImage_Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

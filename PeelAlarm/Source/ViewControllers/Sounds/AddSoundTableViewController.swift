@@ -99,9 +99,21 @@ class SoundsTableViewCell: UITableViewCell {
         soundLabel.text = sound
 
         let isSelected = (sound == selectedSound)
-        let image = (isSelected ? Constants.selectedImage : Constants.deselectedImage)
+        let image = (isSelected ? K.CheckmarkImage.on : K.CheckmarkImage.off)
         checkmarkImageView.image = UIImage(named: image)
-        soundLabel.textColor = (isSelected ? K.Colors.selectionColor : K.Colors.defaultText)
+
+        if #available(iOS 11.0, *) {
+
+            let colorName = (isSelected ? K.Colors.selectionName : K.Colors.defaultTextName)
+            soundLabel.textColor = UIColor.init(named: colorName)
+        }
+        else {
+
+            soundLabel.textColor = (isSelected ? K.Colors.selectionColor : K.Colors.defaultTextColor)
+        }
+
+        // on image is setup as templated image, so can track selection color
+        checkmarkImageView.tintColor = soundLabel.textColor
     }
 }
 
