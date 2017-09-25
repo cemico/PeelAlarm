@@ -16,6 +16,12 @@ import UIKit
 
 extension AddImageViewController {
 
+    struct Sections {
+
+        static let one = "Local Images"
+        static let two = "Online Images"
+    }
+
     func configureTable() {
 
         // remove the dead lines when the display doesn't fill the screen
@@ -28,6 +34,15 @@ extension AddImageViewController {
         // second section for online search image query urls
 //        return 2
         return 1
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
+        switch section {
+
+            case 0:     return Sections.one
+            default:    return nil
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

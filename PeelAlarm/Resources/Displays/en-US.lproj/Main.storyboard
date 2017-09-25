@@ -500,7 +500,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-checkmark-off" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-VG-Mk8">
-                                            <rect key="frame" x="335" y="10" width="30" height="30"/>
+                                            <rect key="frame" x="325" y="10" width="30" height="30"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="7RX-cR-jRH"/>
@@ -512,7 +512,7 @@
                                         <constraint firstItem="sh4-VG-Mk8" firstAttribute="centerY" secondItem="lEA-pV-vLl" secondAttribute="centerY" id="26m-62-pgC"/>
                                         <constraint firstItem="ghQ-40-Tbw" firstAttribute="top" secondItem="lEA-pV-vLl" secondAttribute="top" id="EHa-nj-xkD"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ghQ-40-Tbw" secondAttribute="trailing" id="I6a-bE-p27"/>
-                                        <constraint firstAttribute="trailing" secondItem="sh4-VG-Mk8" secondAttribute="trailing" constant="10" id="OTH-JF-tdF"/>
+                                        <constraint firstAttribute="trailing" secondItem="sh4-VG-Mk8" secondAttribute="trailing" constant="20" id="OTH-JF-tdF"/>
                                         <constraint firstItem="ghQ-40-Tbw" firstAttribute="leading" secondItem="lEA-pV-vLl" secondAttribute="leading" constant="20" id="PFB-hc-Le4"/>
                                         <constraint firstItem="ghQ-40-Tbw" firstAttribute="centerY" secondItem="lEA-pV-vLl" secondAttribute="centerY" id="rTb-bd-giE"/>
                                     </constraints>
@@ -656,7 +656,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-15-uEC">
-                                            <rect key="frame" x="10" y="10" width="47" height="30"/>
+                                            <rect key="frame" x="20" y="10" width="47" height="30"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Gae-p0-oXB"/>
@@ -681,7 +681,7 @@
                                         <constraint firstAttribute="trailing" secondItem="zW5-pG-yBr" secondAttribute="trailing" constant="20" id="Fuc-mY-vN8"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wUE-15-uEC" secondAttribute="trailing" id="Glx-b3-ht7"/>
                                         <constraint firstAttribute="bottom" secondItem="TAn-qV-zbG" secondAttribute="bottom" id="Hyn-B3-y65"/>
-                                        <constraint firstItem="wUE-15-uEC" firstAttribute="leading" secondItem="LEc-HU-Sav" secondAttribute="leading" constant="10" id="M4S-53-V5I"/>
+                                        <constraint firstItem="wUE-15-uEC" firstAttribute="leading" secondItem="LEc-HU-Sav" secondAttribute="leading" constant="20" id="M4S-53-V5I"/>
                                         <constraint firstItem="zW5-pG-yBr" firstAttribute="centerY" secondItem="wUE-15-uEC" secondAttribute="centerY" id="Qno-pj-Adh"/>
                                         <constraint firstAttribute="trailing" secondItem="TAn-qV-zbG" secondAttribute="trailing" id="VLX-Gx-MBm"/>
                                         <constraint firstItem="aAw-4o-gEn" firstAttribute="top" secondItem="LEc-HU-Sav" secondAttribute="top" id="XVY-vq-nBA"/>
