@@ -93,21 +93,26 @@ class UserNotificationMgr {
             content.body = alarm.name
         }
 
-        if alarm.sound.lowercased() == "default" {
+        if alarm.soundName == K.KnownSounds.default {
 
             content.sound = UNNotificationSound.default()
         }
         else {
 
-            content.sound = UNNotificationSound(named: alarm.sound + ".caf")
+            content.sound = UNNotificationSound(named: alarm.soundValue)
         }
         content.categoryIdentifier = CategoryIdentifiers.alarm.rawValue
+
+        // note: one more value for sound/image/video, switch from simple string to item specific dictionaries
         content.userInfo = [
 
             // user enhancements
-            AlarmItem.Keys.sound.rawValue : alarm.sound,
-            AlarmItem.Keys.image.rawValue : alarm.image,
-            AlarmItem.Keys.video.rawValue : alarm.video
+            AlarmItem.Keys.soundName.rawValue : alarm.soundName,
+            AlarmItem.Keys.soundValue.rawValue : alarm.soundValue,
+            AlarmItem.Keys.imageName.rawValue : alarm.imageName,
+            AlarmItem.Keys.imageValue.rawValue : alarm.imageValue,
+            AlarmItem.Keys.videoName.rawValue : alarm.videoName,
+            AlarmItem.Keys.videoValue.rawValue : alarm.videoValue
         ]
 
         // trigger

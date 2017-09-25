@@ -61,7 +61,7 @@ extension AddAlarmViewController: UITableViewDataSource {
             if let cell = cell as? AddAlarmSoundTableViewCell {
 
                 // color the full background
-                cell.soundLabel.text = currentSound
+                cell.soundLabel.text = currentSound.name
                 cell.contentView.superview?.backgroundColor = cell.bkgndView.backgroundColor
             }
             return cell
@@ -73,7 +73,7 @@ extension AddAlarmViewController: UITableViewDataSource {
             if let cell = cell as? AddAlarmImageTableViewCell {
 
                 // color the full background
-                cell.imageLabel.text = currentImage
+                cell.imageLabel.text = currentImage.name
                 cell.contentView.superview?.backgroundColor = cell.bkgndView.backgroundColor
             }
             return cell
@@ -85,7 +85,7 @@ extension AddAlarmViewController: UITableViewDataSource {
             if let cell = cell as? AddAlarmVideoTableViewCell {
 
                 // color the full background
-                cell.videoLabel.text = currentVideo
+                cell.videoLabel.text = currentVideo.name
                 cell.contentView.superview?.backgroundColor = cell.bkgndView.backgroundColor
             }
             return cell

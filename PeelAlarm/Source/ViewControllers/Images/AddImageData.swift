@@ -11,17 +11,9 @@ import UIKit
 
 extension AddImageViewController {
 
-    func updateData() -> [String] {
+    func updateData() -> [NameValueStringTuple] {
 
-        return [
-
-            // todo: iterate image assets, might have to convert to folder references
-            "Smiley-Happy",
-            "Smiley-Mad",
-            "Smiley-Sad",
-            "Smiley-Serious",
-            "Smiley-Curious",
-            "Smiley-Frustrated"
-        ]
+        // todo: iterate image assets, might have to convert to folder references
+        return K.KnownImages.all
     }
 }

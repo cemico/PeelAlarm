@@ -58,7 +58,7 @@ extension AddSoundViewController {
 
             // self update
             let sound = sounds[indexPath.row]
-            cell.update(sound: sound, selectedSound: currentSound)
+            cell.update(sound: sound, selectedSound: currentSound.name)
         }
 
         return cell
@@ -94,11 +94,11 @@ class SoundsTableViewCell: UITableViewCell {
         super.prepareForReuse()
     }
 
-    func update(sound: String, selectedSound: String) {
+    func update(sound: NameValueStringTuple, selectedSound: String) {
 
-        soundLabel.text = sound
+        soundLabel.text = sound.name
 
-        let isSelected = (sound == selectedSound)
+        let isSelected = (sound.name == selectedSound)
         let image = (isSelected ? K.CheckmarkImage.on : K.CheckmarkImage.off)
         checkmarkImageView.image = UIImage(named: image)
 

@@ -24,9 +24,9 @@ class AddAlarmViewController: UIViewController {
     weak var delegate: AddAlarmProtocol?
 
     // current selections - set outside current vc, thus udpate to table
-    var currentSound = K.KnownSounds.default    { didSet { update(at: .sound) } }
-    var currentImage = "Smiley-Happy"           { didSet { update(at: .image) } }
-    var currentVideo = "Rooster"                { didSet { update(at: .video) } }
+    var currentSound = K.Defaults.soundDefault      { didSet { update(at: .sound) } }
+    var currentImage = K.Defaults.imageDefault      { didSet { update(at: .image) } }
+    var currentVideo = K.Defaults.videoDefault      { didSet { update(at: .video) } }
 
     // current selections - set on this vc
     var currentName = LocalizedStringKeys.AlertViewController().tableCellAlarmTitle

@@ -24,7 +24,7 @@ class AddVideoViewController: UITableViewController {
     weak var delegate: AddVideoProtocol?
 
     // model
-    var currentVideo: String = "" {
+    var currentVideo: NameValueStringTuple = K.Defaults.videoDefault {
 
         didSet {
 
@@ -42,7 +42,7 @@ class AddVideoViewController: UITableViewController {
     }
 
     // used for save enabling (used nil so can distinguish from empty string as valid current value)
-    var originalVideo: String? = nil
+    var originalVideo: NameValueStringTuple? = nil
 
     ///////////////////////////////////////////////////////////
     // MARK: - System overrides

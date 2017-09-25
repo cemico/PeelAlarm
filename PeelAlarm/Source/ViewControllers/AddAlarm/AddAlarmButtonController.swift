@@ -20,7 +20,15 @@ extension AddAlarmViewController {
         self.view.endEditing(true)
 
         // notify listener
-        let alarm = AlarmItem(date: currentTime, name: currentName, isEnabled: true, sound: currentSound, image: currentImage, video: currentVideo)
+        let alarm = AlarmItem(date: currentTime,
+                              name: currentName,
+                              isEnabled: true,
+                              soundName: currentSound.name,
+                              soundValue: currentSound.value,
+                              imageName: currentImage.name,
+                              imageValue: currentImage.value,
+                              videoName: currentVideo.name,
+                              videoValue: currentVideo.value)
         print("alarm being scheduled:", alarm.description)
         delegate?.saveClicked(with: alarm) { [unowned self] (success: Bool) in
 

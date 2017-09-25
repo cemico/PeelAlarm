@@ -15,5 +15,5 @@ import Foundation
 protocol AddVideoProtocol: class {
 
     // required
-    func saveVideo(with value: String)
+    func saveVideo(with value: NameValueStringTuple)
 }

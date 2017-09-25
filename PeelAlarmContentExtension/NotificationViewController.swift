@@ -35,11 +35,14 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         let alarmId = notification.request.identifier
         let content = notification.request.content
         let userInfo = content.userInfo
-        let sound = userInfo["sound"] as? String ?? ""
-        let image = userInfo["image"] as? String ?? ""
-        let video = userInfo["video"] as? String ?? ""
+        let soundName = userInfo[K.AlarmItemKeys.soundName] as? String ?? ""
+        let soundValue = userInfo[K.AlarmItemKeys.soundValue] as? String ?? ""
+        let imageName = userInfo[K.AlarmItemKeys.imageName] as? String ?? ""
+        let imageValue = userInfo[K.AlarmItemKeys.imageValue] as? String ?? ""
+        let videoName = userInfo[K.AlarmItemKeys.videoName] as? String ?? ""
+        let videoValue = userInfo[K.AlarmItemKeys.videoValue] as? String ?? ""
 
-        let msg = "Presenting User Alert \(alarmId): s: \(sound), i: \(image), v:\(video)"
+        let msg = "Presenting User Alert \(alarmId): s: \(soundName) / \(soundValue), i: \(imageName) / \(imageValue), v:\(videoName) / \(videoValue)"
         print(msg)
 
         // common gradient background
@@ -47,17 +50,17 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
         // crude random choice
 //        let fetchImageOnline = Int(Date().timeIntervalSince1970) % 2 == 0
-        let fetchImageOnline = (image.prefix(4).lowercased() == "http")
+        let fetchImageOnline = (imageValue.prefix(4).lowercased() == "http")
 
         // image source
-        let imageSource = fetchImageOnline ? "(Online)" : image
+        let imageSource = fetchImageOnline ? "(Online)" : imageName
 
         // details
         var maxSize = CGFloat(0)
         [(idLabel,      "ID",       alarmId),
-         (soundLabel,   "Sound",    sound),
+         (soundLabel,   "Sound",    soundName),
          (imageLabel,   "Image",    imageSource),
-         (videoLabel,   "Video",    video)].forEach({ (label, prefix, value) in
+         (videoLabel,   "Video",    videoName)].forEach({ (label, prefix, value) in
 
             label.text = "  \(prefix): \(value)  "
             label.sizeToFit()
@@ -67,9 +70,9 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         detailsContainerView.frame.size.width = maxSize
         detailsContainerView.backgroundColor = backColor
 
-        // title
-        titleLabel?.text = notification.request.content.title
-        titleLabel?.backgroundColor = backColor
+        // title (set in top portion of alert automagically)
+//        titleLabel?.text = notification.request.content.title
+//        titleLabel?.backgroundColor = backColor
 
         // body
         bodyLabel?.text = notification.request.content.body
@@ -79,7 +82,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         if !fetchImageOnline {
 
             // use notification payload image name
-            backgroundImageView.image = UIImage.alertImageFor(imageName: image)
+            backgroundImageView.image = UIImage.alertImageFor(imageName: imageValue)
         }
         else {
 

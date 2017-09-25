@@ -138,10 +138,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let alarmId = notification.request.identifier
         let content = notification.request.content
         let userInfo = content.userInfo
-        let sound = userInfo[AlarmItem.Keys.sound.rawValue] as? String ?? ""
-        let image = userInfo[AlarmItem.Keys.image.rawValue] as? String ?? ""
-        let video = userInfo[AlarmItem.Keys.video.rawValue] as? String ?? ""
-        print("Presenting User Alert \(alarmId): s: \(sound), i: \(image), v:\(video)")
+        let soundName = userInfo[AlarmItem.Keys.soundName.rawValue] as? String ?? ""
+        let soundValue = userInfo[AlarmItem.Keys.soundValue.rawValue] as? String ?? ""
+        let imageName = userInfo[AlarmItem.Keys.imageName.rawValue] as? String ?? ""
+        let imageValue = userInfo[AlarmItem.Keys.imageValue.rawValue] as? String ?? ""
+        let videoName = userInfo[AlarmItem.Keys.videoName.rawValue] as? String ?? ""
+        let videoValue = userInfo[AlarmItem.Keys.videoValue.rawValue] as? String ?? ""
+        print("Presenting User Alert \(alarmId): s: \(soundName) / \(soundValue), i: \(imageName) / \(imageValue), v:\(videoName) / \(videoValue)")
 
         // pass alert to system w/ presentation type(s) [alert, badge, sound]
         completionHandler([.alert, .sound])
@@ -152,17 +155,20 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
 
         // alert id
-        let actionId = response.actionIdentifier
+        let alarmId = response.actionIdentifier
 
         // get custom info
         let userInfo = response.notification.request.content.userInfo
-        let sound = userInfo[AlarmItem.Keys.sound.rawValue] as? String ?? ""
-        let image = userInfo[AlarmItem.Keys.image.rawValue] as? String ?? ""
-        let video = userInfo[AlarmItem.Keys.video.rawValue] as? String ?? ""
-        print("Received User Alert \(actionId): s: \(sound), i: \(image), v:\(video)")
+        let soundName = userInfo[AlarmItem.Keys.soundName.rawValue] as? String ?? ""
+        let soundValue = userInfo[AlarmItem.Keys.soundValue.rawValue] as? String ?? ""
+        let imageName = userInfo[AlarmItem.Keys.imageName.rawValue] as? String ?? ""
+        let imageValue = userInfo[AlarmItem.Keys.imageValue.rawValue] as? String ?? ""
+        let videoName = userInfo[AlarmItem.Keys.videoName.rawValue] as? String ?? ""
+        let videoValue = userInfo[AlarmItem.Keys.videoValue.rawValue] as? String ?? ""
+        print("Received User Alert \(alarmId): s: \(soundName) / \(soundValue), i: \(imageName) / \(imageValue), v:\(videoName) / \(videoValue)")
 
         // receiving - check if user response matches any of our registered actions
-        switch actionId {
+        switch alarmId {
 
             // custom action: stop
             case UserNotificationMgr.ActionIdentifiers.stop.rawValue:
@@ -185,7 +191,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 UserNotificationMgr.sharedInstance.dismissAction(response: response)
 
             default:
-                print("unknown action id: \(actionId)")
+                print("unknown action id: \(alarmId)")
         }
 
         // chain along

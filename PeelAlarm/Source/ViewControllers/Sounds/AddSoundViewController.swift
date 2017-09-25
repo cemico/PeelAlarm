@@ -24,7 +24,7 @@ class AddSoundViewController: UITableViewController {
     weak var delegate: AddSoundProtocol?
 
     // model
-    var currentSound: String = "" {
+    var currentSound: NameValueStringTuple = K.Defaults.soundDefault {
 
         didSet {
 
@@ -42,10 +42,10 @@ class AddSoundViewController: UITableViewController {
     }
 
     // used for save enabling (used nil so can distinguish from empty string as valid current value)
-    var originalSound: String? = nil
+    private var originalSound: NameValueStringTuple? = nil
 
-    // data source
-    var sounds: [String] = []
+    // data source, array of tuples of format
+    var sounds: [NameValueStringTuple] = []
 
     ///////////////////////////////////////////////////////////
     // MARK: - System overrides

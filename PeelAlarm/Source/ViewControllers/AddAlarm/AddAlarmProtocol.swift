@@ -56,7 +56,7 @@ extension AddAlarmProtocol {
 
 extension AddAlarmViewController: AddSoundProtocol {
 
-    func saveSound(with value: String) {
+    func saveSound(with value: NameValueStringTuple) {
 
         // save new selectioin
         currentSound = value
@@ -65,7 +65,7 @@ extension AddAlarmViewController: AddSoundProtocol {
 
 extension AddAlarmViewController: AddImageProtocol {
 
-    func saveImage(with value: String) {
+    func saveImage(with value: NameValueStringTuple) {
 
         // save new selectioin
         currentImage = value
@@ -74,7 +74,7 @@ extension AddAlarmViewController: AddImageProtocol {
 
 extension AddAlarmViewController: AddVideoProtocol {
 
-    func saveVideo(with value: String) {
+    func saveVideo(with value: NameValueStringTuple) {
 
         // save new selectioin
         currentVideo = value

@@ -18,23 +18,41 @@ class AlarmItem: NSObject, NSCoding {
     enum Keys: String {
 
         // swift 4 nice, will auto-rawValue a String to match enum case
-        case id, version, date, name, isEnabled, sound, image, video
+        // note: enums do not allow you to assign value from struct, only literals
+        //       be sure to keep these enum names in sync with the constants K.AlarmItemKeys.*
+        case id
+        case version
+        case date
+        case name
+        case isEnabled
+        case soundName
+        case soundValue
+        case imageName
+        case imageValue
+        case videoName
+        case videoValue
 
-        static var all: [Keys] = [.id, .version, .date, .name, .isEnabled, .sound, .image, .video]
+        static var all: [Keys] = [
+
+            .id, .version, .date, .name, .isEnabled, .soundName, .soundValue, .imageName, .imageValue, .videoName, .videoValue
+        ]
 
         func value(for alarm: AlarmItem) -> Any {
 
                 // getter
             switch self {
 
-                case .id:           return alarm.id
-                case .version:      return alarm.version
-                case .date:         return alarm.date
-                case .name:         return alarm.name
-                case .isEnabled:    return alarm.isEnabled
-                case .sound:        return alarm.sound
-                case .image:        return alarm.image
-                case .video:        return alarm.video
+                case .id:               return alarm.id
+                case .version:          return alarm.version
+                case .date:             return alarm.date
+                case .name:             return alarm.name
+                case .isEnabled:        return alarm.isEnabled
+                case .soundName:        return alarm.soundName
+                case .soundValue:       return alarm.soundValue
+                case .imageName:        return alarm.imageName
+                case .imageValue:       return alarm.imageValue
+                case .videoName:        return alarm.videoName
+                case .videoValue:       return alarm.videoValue
             }
         }
     }
@@ -63,9 +81,12 @@ class AlarmItem: NSObject, NSCoding {
     var date = Date()
     var isEnabled = false
     var name = ""
-    var sound = ""
-    var image = ""
-    var video = ""
+    var soundName = ""
+    var soundValue = ""
+    var imageName = ""
+    var imageValue = ""
+    var videoName = ""
+    var videoValue = ""
 
     // computed properties
     var hour24: Int {
@@ -117,7 +138,7 @@ class AlarmItem: NSObject, NSCoding {
                     aCoder.encode(value, forKey: key.rawValue)
 
                 // string types
-                case .version, .name, .sound, .image, .video:
+                case .version, .name, .soundName, .soundValue, .imageName, .imageValue, .videoName, .videoValue:
                     let value = String.from(any: key.value(for: self))
                     aCoder.encode(value, forKey: key.rawValue)
 
@@ -152,9 +173,12 @@ class AlarmItem: NSObject, NSCoding {
         // strings
         version     = aDecoder.decodeObject(forKey: Keys.version.rawValue) as? String ?? ""
         name        = aDecoder.decodeObject(forKey: Keys.name.rawValue) as? String ?? ""
-        sound       = aDecoder.decodeObject(forKey: Keys.sound.rawValue) as? String ?? ""
-        image       = aDecoder.decodeObject(forKey: Keys.image.rawValue) as? String ?? ""
-        video       = aDecoder.decodeObject(forKey: Keys.video.rawValue) as? String ?? ""
+        soundName   = aDecoder.decodeObject(forKey: Keys.soundName.rawValue) as? String ?? ""
+        soundValue  = aDecoder.decodeObject(forKey: Keys.soundValue.rawValue) as? String ?? ""
+        imageName   = aDecoder.decodeObject(forKey: Keys.imageName.rawValue) as? String ?? ""
+        imageValue  = aDecoder.decodeObject(forKey: Keys.imageValue.rawValue) as? String ?? ""
+        videoName   = aDecoder.decodeObject(forKey: Keys.videoName.rawValue) as? String ?? ""
+        videoValue  = aDecoder.decodeObject(forKey: Keys.videoValue.rawValue) as? String ?? ""
 
         // bools
         isEnabled   = aDecoder.decodeBool(forKey: Keys.isEnabled.rawValue)
@@ -168,7 +192,15 @@ class AlarmItem: NSObject, NSCoding {
         updateToCurrent()
     }
 
-    convenience init(date: Date, name: String, isEnabled: Bool = true, sound: String = "", image: String = "", video: String = "") {
+    convenience init(date: Date,
+                     name: String,
+                     isEnabled: Bool = true,
+                     soundName: String = "",
+                     soundValue: String = "",
+                     imageName: String = "",
+                     imageValue: String = "",
+                     videoName: String = "",
+                     videoValue: String = "") {
         self.init()
 
         //
@@ -179,9 +211,12 @@ class AlarmItem: NSObject, NSCoding {
         self.date = date
         self.name = name
         self.isEnabled = isEnabled
-        self.sound = sound
-        self.image = image
-        self.video = video
+        self.soundName = soundName
+        self.soundValue = soundValue
+        self.imageName = imageName
+        self.imageValue = imageValue
+        self.videoName = videoName
+        self.videoValue = videoValue
 
         // always use latest
         self.version = Versions.currentVersion.rawValue
@@ -210,14 +245,22 @@ class AlarmItem: NSObject, NSCoding {
                 case Keys.name.rawValue:
                     name = String.from(any: value)
 
-                case Keys.sound.rawValue:
-                    sound = String.from(any: value)
+                case Keys.soundName.rawValue:
+                    soundName = String.from(any: value)
+                case Keys.soundValue.rawValue:
+                    soundValue = String.from(any: value)
 
-                case Keys.image.rawValue:
-                    image = String.from(any: value)
+                case Keys.imageName.rawValue:
+                    imageName = String.from(any: value)
 
-                case Keys.video.rawValue:
-                    video = String.from(any: value)
+                case Keys.imageValue.rawValue:
+                    imageValue = String.from(any: value)
+
+                case Keys.videoName.rawValue:
+                    videoName = String.from(any: value)
+
+                case Keys.videoValue.rawValue:
+                    videoValue = String.from(any: value)
 
                 // bools
                 case Keys.isEnabled.rawValue:

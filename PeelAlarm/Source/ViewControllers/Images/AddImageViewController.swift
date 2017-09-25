@@ -24,7 +24,7 @@ class AddImageViewController: UITableViewController {
     weak var delegate: AddImageProtocol?
 
     // model
-    var currentImage: String = "" {
+    var currentImage: NameValueStringTuple = K.Defaults.imageDefault {
 
         didSet {
 
@@ -42,10 +42,10 @@ class AddImageViewController: UITableViewController {
     }
 
     // used for save enabling (used nil so can distinguish from empty string as valid current value)
-    var originalImage: String? = nil
+    var originalImage: NameValueStringTuple? = nil
 
     // data source
-    var images: [String] = []
+    var images: [NameValueStringTuple] = []
 
     ///////////////////////////////////////////////////////////
     // MARK: - System overrides

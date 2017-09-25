@@ -15,5 +15,5 @@ import Foundation
 protocol AddImageProtocol: class {
 
     // required
-    func saveImage(with value: String)
+    func saveImage(with value: NameValueStringTuple)
 }

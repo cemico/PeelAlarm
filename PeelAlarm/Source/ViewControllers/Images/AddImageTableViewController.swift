@@ -22,6 +22,11 @@ extension AddImageViewController {
         tableView.removeUnusedBottomRowsWithTableFooter()
     }
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+
+        return 2
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return images.count
@@ -60,7 +65,7 @@ extension AddImageViewController {
 
             // self update
             let image = images[indexPath.row]
-            cell.update(imageName: image, selectedImage: currentImage)
+            cell.update(imageData: image, selectedImage: currentImage.name)
         }
 
         return cell
@@ -93,11 +98,11 @@ class ImagesTableViewCell: UITableViewCell {
         pictureImageView.image = nil
     }
 
-    func update(imageName: String, selectedImage: String) {
+    func update(imageData: NameValueStringTuple, selectedImage: String) {
 
-        imageLabel.text = imageName
+        imageLabel.text = imageData.name
 
-        let isSelected = (imageName == selectedImage)
+        let isSelected = (imageData.name == selectedImage)
         let image = (isSelected ? K.CheckmarkImage.on : K.CheckmarkImage.off)
         checkmarkImageView.image = UIImage(named: image)
 
@@ -111,6 +116,7 @@ class ImagesTableViewCell: UITableViewCell {
             imageLabel.textColor = (isSelected ? K.Colors.selectionColor : K.Colors.defaultTextColor)
         }
 
+        let imageName = imageData.value
         pictureImageView.image = UIImage.alertImageFor(imageName: imageName)
     }
 }

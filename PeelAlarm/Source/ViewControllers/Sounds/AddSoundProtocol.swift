@@ -15,5 +15,5 @@ import Foundation
 protocol AddSoundProtocol: class {
 
     // required
-    func saveSound(with value: String)
+    func saveSound(with value: NameValueStringTuple)
 }

@@ -10,15 +10,19 @@ import Foundation
 
 extension AddSoundViewController {
 
-    func updateData() -> [String] {
+    func updateData() -> [NameValueStringTuple] {
 
         // pull all the bundled sounds for *.caf
         let ext = "caf"
-        var sounds = Bundle.main.resourceFiles(ofType: ext).sorted()
+        let sounds = Bundle.main.resourceFiles(ofType: ext).sorted()
+
+        // sounds have simple rule of value is same as name, simple map
+        var soundTuples = sounds.map({ return (name: $0, value: $0 + ".caf") })
 
         // add default
-        sounds.insert(K.KnownSounds.default, at: 0)
+        let defaultSound = NameValueStringTuple(name: K.KnownSounds.default, value: "")
+        soundTuples.insert(defaultSound, at: 0)
 
-        return sounds
+        return soundTuples
     }
 }
