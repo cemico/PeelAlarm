@@ -24,7 +24,10 @@ extension AddImageViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 2
+        // first section for locally bunded images
+        // second section for online search image query urls
+//        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
